@@ -116,7 +116,7 @@ sha256sum -c sha256sums.txt
 
 ---
 
-## 🙏 致谢 / Credits（请为一下作者点亮star✨）
+## 🙏 致谢 / Credits（请为以一下作者点亮star✨）
 
 - [神烦老狗 @laogou717](https://github.com/laogou717) — 原创作者 Original Author
 - [xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows) — Windows 适配 Windows Port
