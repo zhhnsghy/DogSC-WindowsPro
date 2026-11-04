@@ -1,20 +1,28 @@
- 
+# 🐕 DogSC·Pro v44.7.0
 
-> 🐕 **录屏与轻量编辑工具 · Screen Recording & Lightweight Editor**
+> 录屏与轻量编辑工具 · Screen Recording & Lightweight Editor
 >
-> 基于 [laogou717/dogsc](https://github.com/laogou717/dogsc)（神烦老狗）的 Windows 适配版 · Windows port of the original macOS app by 神烦老狗
+> 基于开源项目的 Windows 二创版 · Windows derivative based on open-source projects
 
 ---
 
 ## 📌 关于本项目 / About This Project
 
-**原创作者 / Original Author:** 神烦老狗 ([@laogou717](https://github.com/laogou717))  
-**原版仓库 / Upstream:** [github.com/laogou717/dogsc](https://github.com/laogou717/dogsc)（macOS）  
-**Windows 适配 / Windows Port:** [xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows)
+**DogSC·Pro** 是基于开源录屏工具 DogSC 的 Windows 二创版本，在原版基础上进行了适配与打包，让 Windows 用户也能体验这款简洁高效的录屏编辑器。
 
-DogSC 是神烦老狗原创的录屏与编辑工具，以 MIT License 开源。本版本基于 Windows 适配仓库打包，将其编译为可直接安装的 `.exe` 和便携版 `.zip`。
+**DogSC·Pro** is a Windows derivative of the open-source screen recording tool DogSC, adapted and packaged to bring this elegant screen editor to Windows users.
 
-DogSC is a screen recording and editing tool created by 神烦老狗, released under the MIT License. This release packages the Windows port into an installable `.exe` and a portable `.zip`.
+### 溯源 / Attribution
+
+| 项目 Project | 作者 Author | 仓库 Repository |
+|-------------|------------|----------------|
+| 原创 DogSC | 神烦老狗 [@laogou717](https://github.com/laogou717) | [github.com/laogou717/dogsc](https://github.com/laogou717/dogsc) (macOS) |
+| Windows 适配 | [xiaoying8666](https://github.com/xiaoying8666) | [github.com/xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows) |
+| **DogSC·Pro**（本版） | — | — |
+
+> ⚠️ 本版本不是原作者的官方发布。遇到问题请提交到本仓库，不要提到上游仓库。
+>
+> This release is not an official build by the original author. Please file issues in this repo, not upstream.
 
 ---
 
@@ -22,45 +30,48 @@ DogSC is a screen recording and editing tool created by 神烦老狗, released u
 
 | 文件 File | 说明 Description | 大小 Size | SHA256 |
 |-----------|------------------|-----------|--------|
-| `DogSC-Setup-44.7.0.exe` | Windows 安装程序（推荐）Installer (Recommended) | 126.72 MB | `73c4fafa2294fadb458023b28f1735d2bd77c4a20a9d5969a5731a2d7facc53c` |
-| `DogSC-win32-x64-44.7.0.zip` | 便携版（免安装）Portable (No install) | 175.83 MB | `ed1636aee6aa8cdd23760b5929a9d11bca1e9e9cda4dd155844934d38f6f3f4a` |
+| `DogSC-Pro-win32-x64-44.7.0.zip` | 便携版（免安装）Portable | 174.41 MB | `6599584920bb3ef4dc752d7557423a5cf3cd1638d2efd3409a79b110c6297843` |
 
-> 完整校验和见 `sha256sums.txt` · Full checksums in `sha256sums.txt`
+> 完整校验和见 [`sha256sums.txt`](./sha256sums.txt) · Full checksums in [`sha256sums.txt`](./sha256sums.txt)
 
 ---
 
 ## 🖥️ 系统要求 / System Requirements
 
-- **操作系统 / OS:** Windows 10 2004+ / Windows 11（64-bit）
+- **操作系统 / OS:** Windows 10 (2004+) / Windows 11（64-bit）
 - **架构 / Architecture:** x64 (Intel / AMD)
 - **磁盘空间 / Disk Space:** ~300 MB
+- **运行环境 / Runtime:** 无需额外安装 · No additional installation required
 
 ---
 
-## 🚀 安装 / Installation
+## 🚀 使用方法 / How to Use
 
-### 方式一：安装程序（推荐） / Installer (Recommended)
+### 便携版（免安装） / Portable
 
-双击 `DogSC-Setup-44.7.0.exe`，按向导完成安装。
-Double-click `DogSC-Setup-44.7.0.exe` and follow the wizard.
+1. 下载并解压 `DogSC-Pro-win32-x64-44.7.0.zip`
+2. 进入解压后的文件夹
+3. 双击 `DogSC.exe` 直接运行
 
-### 方式二：便携版 / Portable
-
-解压 `DogSC-win32-x64-44.7.0.zip`，双击 `DogSC.exe` 直接运行。
-Extract `DogSC-win32-x64-44.7.0.zip`, then double-click `DogSC.exe` to run.
+```powershell
+# PowerShell 快速启动
+Expand-Archive DogSC-Pro-win32-x64-44.7.0.zip -DestinationPath DogSC-Pro
+.\DogSC-Pro\DogSC.exe
+```
 
 ---
 
 ## ✅ 校验完整性 / Verify Checksum
 
+### PowerShell（推荐）
+
 ```powershell
-# PowerShell
-Get-FileHash DogSC-Setup-44.7.0.exe -Algorithm SHA256
-Get-FileHash DogSC-win32-x64-44.7.0.zip -Algorithm SHA256
+Get-FileHash DogSC-Pro-win32-x64-44.7.0.zip -Algorithm SHA256
 ```
 
+### Git Bash / WSL
+
 ```bash
-# Git Bash / WSL
 sha256sum -c sha256sums.txt
 ```
 
@@ -83,12 +94,14 @@ sha256sum -c sha256sums.txt
 
 ### v44.7.0
 
-- 🎉 首次打包发布 Windows 安装版与便携版
-- 🎉 Initial packaged release with Windows installer & portable zip
+- 🎉 DogSC·Pro 首次发布 / Initial release of DogSC·Pro
+- 基于 DogSC v44.7.0 Windows 适配版打包 / Packaged from DogSC v44.7.0 Windows port
 
 ---
 
 ## 📄 许可 / License
+
+本软件基于 MIT License 开源项目打包。
 
 - 原版 DogSC：Copyright (c) 2026 神烦老狗，[MIT License](https://github.com/laogou717/dogsc/blob/main/LICENSE)
 - Windows 适配：[MIT License](https://github.com/xiaoying8666/dogscwindows/blob/main/LICENSE)
@@ -101,9 +114,3 @@ sha256sum -c sha256sums.txt
 - [神烦老狗 @laogou717](https://github.com/laogou717) — 原创作者 Original Author
 - [xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows) — Windows 适配 Windows Port
 - 所有开源贡献者 All open-source contributors
-
----
-
-> ⚠️ **注意 / Note:** 本 Windows 适配版不是原作者的官方发布，使用遇到的问题请提交到 [xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows) 的 Issues，不要提到原仓库。
->
-> This Windows port is not an official release by the original author. Please file issues in the Windows port repo, not the upstream.
