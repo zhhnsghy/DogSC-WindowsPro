@@ -30,6 +30,7 @@
 
 | 文件 File | 说明 Description | 大小 Size | SHA256 |
 |-----------|------------------|-----------|--------|
+| `DogSC-Pro-Setup-44.7.0.exe` | 安装程序（推荐）Installer (Recommended) | 129.15 MB | `bc97f5a852d6c88de66d7435c78d35ffd59137616c015d6a7a774ffb3a88fdd3` |
 | `DogSC-Pro-win32-x64-44.7.0.zip` | 便携版（免安装）Portable | 174.41 MB | `6599584920bb3ef4dc752d7557423a5cf3cd1638d2efd3409a79b110c6297843` |
 
 > 完整校验和见 [`sha256sums.txt`](./sha256sums.txt) · Full checksums in [`sha256sums.txt`](./sha256sums.txt)
@@ -45,9 +46,14 @@
 
 ---
 
-## 🚀 使用方法 / How to Use
+## 🚀 安装使用 / How to Use
 
-### 便携版（免安装） / Portable
+### 方式一：安装程序（推荐） / Installer (Recommended)
+
+双击 `DogSC-Pro-Setup-44.7.0.exe`，按向导完成安装。
+Double-click `DogSC-Pro-Setup-44.7.0.exe` and follow the wizard.
+
+### 方式二：便携版 / Portable
 
 1. 下载并解压 `DogSC-Pro-win32-x64-44.7.0.zip`
 2. 进入解压后的文件夹
@@ -66,6 +72,7 @@ Expand-Archive DogSC-Pro-win32-x64-44.7.0.zip -DestinationPath DogSC-Pro
 ### PowerShell（推荐）
 
 ```powershell
+Get-FileHash DogSC-Pro-Setup-44.7.0.exe -Algorithm SHA256
 Get-FileHash DogSC-Pro-win32-x64-44.7.0.zip -Algorithm SHA256
 ```
 
@@ -95,7 +102,7 @@ sha256sum -c sha256sums.txt
 ### v44.7.0
 
 - 🎉 DogSC·Pro 首次发布 / Initial release of DogSC·Pro
-- 基于 DogSC v44.7.0 Windows 适配版打包 / Packaged from DogSC v44.7.0 Windows port
+- 提供安装程序（.exe）和便携版（.zip）两种发布格式 / Two release formats: Installer (.exe) and Portable (.zip)
 
 ---
 
@@ -109,8 +116,9 @@ sha256sum -c sha256sums.txt
 
 ---
 
-## 🙏 致谢 / Credits
+## 🙏 致谢 / Credits（请为一下作者点亮star✨）
 
 - [神烦老狗 @laogou717](https://github.com/laogou717) — 原创作者 Original Author
 - [xiaoying8666/dogscwindows](https://github.com/xiaoying8666/dogscwindows) — Windows 适配 Windows Port
 - 所有开源贡献者 All open-source contributors
+
